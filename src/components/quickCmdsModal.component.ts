@@ -2,7 +2,7 @@ import { Component } from '@angular/core'
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap'
 import { ConfigService, AppService, BaseTabComponent, SplitTabComponent } from 'terminus-core'
 import { QuickCmds, ICmdGroup } from '../api'
-import { TerminalTabComponent } from 'terminus-terminal';
+import { BaseTerminalTabComponent } from 'terminus-terminal';
 
 @Component({
     template: require('./quickCmdsModal.component.pug'),
@@ -41,8 +41,8 @@ export class QuickCmdsModalComponent {
         if (tab instanceof SplitTabComponent) {
             this._send((tab as SplitTabComponent).getFocusedTab(), cmd)
         }
-        if (tab instanceof TerminalTabComponent) {
-            let currentTab = tab as TerminalTabComponent
+        if (tab instanceof BaseTerminalTabComponent) {
+            let currentTab = tab as BaseTerminalTabComponent
             console.log("Sending " + cmd);
             currentTab.sendInput(cmd)
         }
