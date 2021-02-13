@@ -23,7 +23,7 @@ export class ButtonProvider extends ToolbarButtonProvider {
 
     provide (): IToolbarButton[] {
         return [{
-            icon: require('./icons/keyboard.svg'),
+            icon: require('./icons/hand-sparkles.svg'),
             weight: 5,
             title: 'Quick commands',
             touchBarNSImage: 'NSTouchBarComposeTemplate',

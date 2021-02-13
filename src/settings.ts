@@ -6,6 +6,7 @@ import { QuickCmdsSettingsTabComponent } from './components/quickCmdsSettingsTab
 @Injectable()
 export class QuickCmdsSettingsTabProvider extends SettingsTabProvider {
     id = 'qc'
+    icon = 'hand-sparkles'
     title = 'Quick Commands'
 
     getComponentType (): any {
