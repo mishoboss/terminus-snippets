@@ -11,7 +11,7 @@ export class ButtonProvider extends ToolbarButtonProvider {
     ) {
         super()
         hotkeys.matchedHotkey.subscribe(async (hotkey) => {
-            if (hotkey === 'qc') {
+            if (hotkey === 'show-quick-cmds') {
                 this.activate()
             }
         })

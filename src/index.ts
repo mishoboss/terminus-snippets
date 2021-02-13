@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
-import { ToolbarButtonProvider, ConfigProvider } from 'terminus-core'
+import { ToolbarButtonProvider, ConfigProvider, HotkeyProvider } from 'terminus-core'
 import TerminusCoreModule from 'terminus-core'
 import { SettingsTabProvider } from 'terminus-settings'
 
@@ -14,6 +14,7 @@ import { PromptModalComponent } from './components/promptModal.component'
 import { ButtonProvider } from './buttonProvider'
 import { QuickCmdsConfigProvider } from './config'
 import { QuickCmdsSettingsTabProvider } from './settings'
+import { QuickCmdsHotkeyProvider } from './hotkeys'
 
 @NgModule({
     imports: [
@@ -26,6 +27,7 @@ import { QuickCmdsSettingsTabProvider } from './settings'
         { provide: ToolbarButtonProvider, useClass: ButtonProvider, multi: true },
         { provide: ConfigProvider, useClass: QuickCmdsConfigProvider, multi: true },
         { provide: SettingsTabProvider, useClass: QuickCmdsSettingsTabProvider, multi: true },
+        { provide: HotkeyProvider, useClass: QuickCmdsHotkeyProvider, multi: true },
     ],
     entryComponents: [
         PromptModalComponent,
