@@ -25,7 +25,7 @@ export class ButtonProvider extends ToolbarButtonProvider {
         return [{
             icon: require('./icons/hand-sparkles.svg'),
             weight: 5,
-            title: 'Quick commands',
+            title: 'Snippets',
             touchBarNSImage: 'NSTouchBarComposeTemplate',
             click: async () => {
                 this.activate()

@@ -2,10 +2,15 @@
     display: block;
     max-height: 70vh;
     overflow-y: auto;
+    cursor: pointer; 
 }
 
 .quickCmd {
-    flex: 2 !important
+    flex: 2 !important;
+}
+
+.hand {
+    cursor: pointer; 
 }
 
 .quickCmdContainer {
